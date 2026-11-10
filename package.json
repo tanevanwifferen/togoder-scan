@@ -1,0 +1,48 @@
+{
+  "name": "togoder-scan",
+  "version": "0.1.0",
+  "description": "Scan your lockfile for malicious dependencies: an AI model reads the source of every package. Only the lockfile is uploaded.",
+  "keywords": [
+    "npm",
+    "security",
+    "supply-chain",
+    "supply-chain-security",
+    "malware",
+    "malicious-packages",
+    "lockfile",
+    "package-lock",
+    "pnpm",
+    "yarn",
+    "bun",
+    "pypi",
+    "cargo",
+    "scanner",
+    "sarif",
+    "github-actions",
+    "npm-audit"
+  ],
+  "homepage": "https://security.togoder.click",
+  "bugs": {
+    "url": "https://github.com/tanevanwifferen/togoder-scan/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanevanwifferen/togoder-scan.git"
+  },
+  "license": "MIT",
+  "author": "Tane van Wifferen",
+  "type": "module",
+  "bin": {
+    "togoder-scan": "bin/togoder-scan.js"
+  },
+  "files": [
+    "bin/",
+    "lib/"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test test/"
+  }
+}
