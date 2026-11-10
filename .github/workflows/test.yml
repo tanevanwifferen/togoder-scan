@@ -1,8 +1,9 @@
 name: test
+# Only our own pushes to main and manual runs; pull requests never start a run
 on:
   push:
     branches: [main]
-  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
