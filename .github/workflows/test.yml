@@ -1,8 +1,7 @@
 name: test
-# Only our own pushes to main and manual runs; pull requests never start a run
+# Manual runs only (Actions tab > test > Run workflow); only people with write
+# access to this repository can start one, and the job runs only for the owner
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -10,6 +9,7 @@ permissions:
 
 jobs:
   test:
+    if: github.actor == github.repository_owner
     runs-on: ubuntu-latest
     strategy:
       matrix:
